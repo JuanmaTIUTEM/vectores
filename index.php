@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>
-		Matrices JavaScript
+		Menú Principal
 	</title>
 	<!-- Latest compiled and minified CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -13,241 +13,37 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <style type="text/css">
-	.cel{
-		width: 50px;
-		height: 40px;
-	}
-	.cel2{
-		width: 60px;
-		height: 40px;
-	}
 	.w-20{
-		width: 19%;
-		margin: .5%;
+		width: 18%;
+		margin: .5%;	
 	}
 	.w-80{
-		width: 99%;
-		margin: .5%;
+		width: 78%;
+		margin: .5%;	
+	}
+	.footer {
+		position: fixed;
+		height: auto;
+		bottom: 0;
+		width: 100%;
 	}
 </style>
-<?php 
-	for ($r=0; $r < 5 ; $r++) { 
-		for ($c=0; $c < 5; $c++) { 
-				$matrizA[$r][$c] = rand(1,99);
-				$matrizB[$r][$c] = rand(1,99);
-			}	
-	}
-
- ?>
-<body>
-	<div class="d-flex flex-wrap justify-content-end">
-		<form action="ordenamiento.php">
-			<button type="submit" class="btn btn-success btn-lg"> Ordenamiento</button>
-		</form>
-	</div>
-	<div class="d-flex flex-wrap">
-		<!--<section class="container-fluid w-20 shadow p-4 mb-4 bg-primary">
-			<div class="d-flex flex-column justify-content-center">
-				<div class="p-2">
-
-					<button class="btn btn-outline-dark">Sumar</button>
-				</div>
-				<div class="p-2">
-					<button class="btn btn-outline-dark">Restar</button>
-				</div>
-				<div class="p-2">
-					<button class="btn btn-outline-dark">Multipicar</button>
-				</div>
-				<div class="p-2">
-					<button class="btn btn-outline-dark">Dividir</button>
-				</div>
-			</div>
-		</section>-->
-		<section class="container p-2 shadow p-4 mb-4  w-80" id="matrices">
-			<div class="d-flex flex-wrap">
-				<div class="p-1">
-					<div class="input-group mb-3 ">
-						<span class="input-group-text">Matriz A:</span>
-						<div>
-							<?php 
-								for ($r=0; $r < 5; $r++) { ?>
-								<div class="d-flex flex-wrap ">
-									<?php for ($c=0; $c < 5; $c++) {  ?>
-										<div class="p-2 border cel text-center">
-											<?php echo $matrizA[$r][$c]; ?>
-										</div>
-									<?php } ?>
-								</div>	
-							<?php }  ?>
-						</div>
-					</div>
-				</div>
-				<div class="p-1">
-					<div class="input-group mb-3 ">
-						<span class="input-group-text">Matriz B:</span>
-						<div>
-							<?php 
-								for ($r=0; $r < 5; $r++) { ?>
-								<div class="d-flex flex-wrap ">
-									<?php for ($c=0; $c < 5; $c++) {  ?>
-										<div class="p-2 border cel text-center">
-											<?php echo $matrizB[$r][$c]; ?>
-										</div>
-									<?php } ?>
-								</div>	
-							<?php }  ?>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="d-flex flex-column ">
-				<div class="p-2">
-					<div class="input-group mb-3 " id="suma">
-						<span class="input-group-text">SUMA (A+B):</span>
-						<div>
-							<?php 
-								for ($r=0; $r < 5; $r++) { ?>
-								<div class="d-flex flex-wrap ">
-									<?php for ($c=0; $c < 5; $c++) {  ?>
-										<div class="p-2 border cel text-center">
-											<?php echo $matrizA[$r][$c] +  $matrizB[$r][$c]; ?>
-										</div>
-									<?php } ?>
-								</div>	
-							<?php }  ?>
-						</div>
-					</div>
-				</div>
-				<div class="d-flex flex-wrap">
-					<div class="p-2">
-						<div class="input-group mb-3 " id="resta">
-							<span class="input-group-text">RESTA(A-B):</span>
-							<div>
-								<?php 
-									for ($r=0; $r < 5; $r++) { ?>
-									<div class="d-flex flex-wrap ">
-										<?php for ($c=0; $c < 5; $c++) {  ?>
-											<div class="p-2 border cel text-center">
-												<?php echo $matrizA[$r][$c] -  $matrizB[$r][$c]; ?>
-											</div>
-										<?php } ?>
-									</div>	
-								<?php }  ?>
-							</div>
-						</div>
-					</div>
-					<div class="p-2">
-						<div class="input-group mb-3 " id="resta">
-							<span class="input-group-text">RESTA(B-A):</span>
-							<div>
-								<?php 
-									for ($r=0; $r < 5; $r++) { ?>
-									<div class="d-flex flex-wrap ">
-										<?php for ($c=0; $c < 5; $c++) {  ?>
-											<div class="p-2 border cel text-center">
-												<?php echo $matrizB[$r][$c] -  $matrizA[$r][$c]; ?>
-											</div>
-										<?php } ?>
-									</div>	
-								<?php }  ?>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="p-2">
-					<div class="input-group mb-3 " id="resta">
-						<span class="input-group-text">MULTIPLICACIÓN (A*B):</span>
-						<div>
-							<?php 
-								for ($r=0; $r < 5; $r++) { ?>
-								<div class="d-flex flex-wrap ">
-									<?php for ($c=0; $c < 5; $c++) {  ?>
-										<div class="p-2 border cel2 text-center">
-											<?php echo $matrizA[$r][$c] *  $matrizB[$r][$c]; ?>
-										</div>
-									<?php } ?>
-								</div>	
-							<?php }  ?>
-						</div>
-					</div>
-				</div>
-				<div class="d-flex flex-wrap">
-					<div class="p-2">
-						<div class="input-group mb-3 " id="resta">
-							<span class="input-group-text">DIVISIÓN (A/B):</span>
-							<div>
-								<?php 
-									for ($r=0; $r < 5; $r++) { ?>
-									<div class="d-flex flex-wrap ">
-										<?php for ($c=0; $c < 5; $c++) {  ?>
-											<div class="p-2 border cel text-center">
-												<?php echo number_format(($matrizA[$r][$c] /  $matrizB[$r][$c]),2); ?>
-											</div>
-										<?php } ?>
-									</div>	
-								<?php }  ?>
-							</div>
-						</div>
-					</div>
-					<div class="p-2">
-						<div class="input-group mb-3 " id="resta">
-							<span class="input-group-text">DIVISIÓN (B/A):</span>
-							<div>
-								<?php 
-									for ($r=0; $r < 5; $r++) { ?>
-									<div class="d-flex flex-wrap ">
-										<?php for ($c=0; $c < 5; $c++) {  ?>
-											<div class="p-2 border cel text-center">
-												<?php echo number_format(($matrizB[$r][$c] /  $matrizA[$r][$c]),2); ?>
-											</div>
-										<?php } ?>
-									</div>	
-								<?php }  ?>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-	</div>
-	<hr>
-	<section class="container">
-		<div class="d-flex flex-wrap" id="matriz2">
-			
+<body class="d-flex flex-wrap justify-content-center bg-light">
+	<main class="container-fluid w-20 border rounded shadow p-2 mb-2 bg-white h-100">
+		<div class="list-group">
+		  <a href="cpostales.php" class="list-group-item list-group-item-action">Códigos Postales</a>
+		  <a href="vectores.php" class="list-group-item list-group-item-action">Vectores</a>
+		  <a href="ordenamiento.php" class="list-group-item list-group-item-action">Ordenamiento</a>
 		</div>
+	</main>
+	
+	<section class="container w-80 border rounded shadow p-2 mb-2 bg-white mh-100">
+		
 	</section>
+
+
 </body>
-<script type="text/javascript">
-	let m2 = document.getElementById('matriz2');
-	let ciudades = new Array();
-	let temperaturas;
-	let tem;
-	let cad = '';
-	let cd;
-
-	for (var i = 0; i < 3; i++) {
-		temperaturas = new Array();
-		cd = prompt('Nombre de la ciudad:')
-		for (var j = 0; j < 3; j++) {
-			temperaturas[j] = prompt('Temperatura '+ (j+1) + ':');
-		}
-		ciudades[cd] = temperaturas;
-	}
-	for (var property in ciudades) {
-	  cad += '<div class="p-1"><div class="input-group mb-3 ">		<span class="input-group-text">'+ property +'</span><div class="d-flex flex-wrap ">';
-	  for (var i = 0; i < 3; i++) {
-	  	cad += '<div class="p-2 border cel text-center">'
-	  	cad += ciudades[property][i];
-	  	cad += '</div>';
-	  }
-	  cad += '</div></div>';
-
-	}
-
-	console.log(cad);
-	//m2.innerHTML = cad;
-</script>
-
-
-
+<footer class="container-fluid footer mt-auto p-1 bg-secondary text-end">
+	<p>MSC. Juan Manuel Fernández Alvarez <br>&#169;2023</p>
+</footer>
 </html>

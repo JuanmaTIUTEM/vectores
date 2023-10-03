@@ -104,10 +104,6 @@
 			?>
 		</section>
 	</div>
-	<div class="container d-flex flex-wrap justify-content-end">
-		<form action="cpostales.php">
-			<button class="btn btn-outline-success">Codigos postales</button>
-		</form>
-	</div>
+	
 </body>
 </html>
