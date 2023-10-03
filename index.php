@@ -1,3 +1,13 @@
+<?php 
+
+	include "vectores.php";
+	include "ordenamiento.php";
+	include "cpostales.php";
+
+
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
