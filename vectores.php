@@ -1,17 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>
-		Matrices JavaScript
-	</title>
-	<!-- Latest compiled and minified CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Latest compiled JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-</head>
 <style type="text/css">
 	.cel{
 		width: 50px;
@@ -39,12 +25,7 @@
 	}
 
  ?>
-<body>
-	<div class="d-flex flex-wrap justify-content-end">
-		<form action="ordenamiento.php">
-			<button type="submit" class="btn btn-success btn-lg"> Ordenamiento</button>
-		</form>
-	</div>
+
 	<div class="d-flex flex-wrap">
 		<!--<section class="container-fluid w-20 shadow p-4 mb-4 bg-primary">
 			<div class="d-flex flex-column justify-content-center">
@@ -216,7 +197,6 @@
 			
 		</div>
 	</section>
-</body>
 <script type="text/javascript">
 	let m2 = document.getElementById('matriz2');
 	let ciudades = new Array();
@@ -225,29 +205,32 @@
 	let cad = '';
 	let cd;
 
-	for (var i = 0; i < 3; i++) {
-		temperaturas = new Array();
-		cd = prompt('Nombre de la ciudad:')
-		for (var j = 0; j < 3; j++) {
-			temperaturas[j] = prompt('Temperatura '+ (j+1) + ':');
+	function temperatures(){
+		for (var i = 0; i < 3; i++) {
+			temperaturas = new Array();
+			cd = prompt('Nombre de la ciudad:')
+			for (var j = 0; j < 3; j++) {
+				temperaturas[j] = prompt('Temperatura '+ (j+1) + ':');
+			}
+			ciudades[cd] = temperaturas;
 		}
-		ciudades[cd] = temperaturas;
-	}
-	for (var property in ciudades) {
-	  cad += '<div class="p-1"><div class="input-group mb-3 ">		<span class="input-group-text">'+ property +'</span><div class="d-flex flex-wrap ">';
-	  for (var i = 0; i < 3; i++) {
-	  	cad += '<div class="p-2 border cel text-center">'
-	  	cad += ciudades[property][i];
-	  	cad += '</div>';
-	  }
-	  cad += '</div></div>';
+		for (var property in ciudades) {
+		  cad += '<div class="p-1"><div class="input-group mb-3 ">		<span class="input-group-text">'+ property +'</span><div class="d-flex flex-wrap ">';
+		  for (var i = 0; i < 3; i++) {
+		  	cad += '<div class="p-2 border cel text-center">'
+		  	cad += ciudades[property][i];
+		  	cad += '</div>';
+		  }
+		  cad += '</div></div>';
 
+		}
+
+		console.log(cad);
+		//m2.innerHTML = cad;
 	}
 
-	console.log(cad);
-	//m2.innerHTML = cad;
+	
 </script>
 
 
 
-</html>

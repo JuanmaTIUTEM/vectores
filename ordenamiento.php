@@ -1,23 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Operaciones de ordenamiento</title>
-</head>
-	<!-- Latest compiled and minified CSS -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-
-	<!-- Latest compiled JavaScript -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-
 	<style type="text/css">
 		.w-45{
 			width: 45%;
 		}
 	</style>
 
-<body>
+	
 	<div class="d-flex flex-wrap justify-content-center">
 		<section id="arrPHP" class="container shadow p-4 mb-4 border rounded  m-3 w-45">
 			<h2>Operaciones Javascript <hr></h2>
@@ -104,6 +91,3 @@
 			?>
 		</section>
 	</div>
-	
-</body>
-</html>

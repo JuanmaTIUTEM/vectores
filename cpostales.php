@@ -1,58 +1,17 @@
+	
+	<?php 
 
-<?php 
-
-	include "conection.php";
+		include "conection.php";
 
 
- ?>
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Códigos postales</title>
-</head>
-<!-- Latest compiled and minified CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+	 ?>
 
-<!-- Latest compiled JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-
-<style type="text/css">
-	.w-80{
-		width: 75%;
-		margin: 0.5%;
-	}
-	.w-20{
-		width: 15%;
-		margin: 0.5%;
-	}
-</style>
-
-<body class="container-fluid">
-	<div class="d-flex flex-wrap justify-content-around flex-column w-20 border">
-	<ul class="nav flex-column">
-	    <li class="nav-item">
-	      <a class="nav-link" href="#">Link</a>
-	    </li>
-	    <li class="nav-item">
-	      <a class="nav-link" href="#">Link</a>
-	    </li>
-	    <li class="nav-item">
-	      <a class="nav-link" href="#">Link</a>
-	    </li>
-	    <li class="nav-item">
-	      <a class="nav-link disabled" href="#">Disabled</a>
-	    </li>
-	  </ul>	
-	</div>
-	<div class="d-flex flex-wrap justify-content-center w-80 border">
+	<div class="d-flex flex-wrap justify-content-center border">
 		<section class="container shadow p-4 mb-4 border rounded m-3 bg-light" id="tittle">
 			<h1 class="text-center">Listado de Códigos Postales de México <hr></h1>
 			<div class="d-flex flex-wrap justify-content-center flex-column">
 				<div class="table table-responsive" id="allData">
-					<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-					<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
 					<table class="table table-bordered table-hover table-dark" id="tblCodes">
 						<thead>
 							<tr>
@@ -105,18 +64,18 @@
 					</table>
 
 
-					<ul class="pagination">
+					<ul class="pagination d-flex flex-wrap justify-content-around">
 					    <?php if ($paginaActual > 1): ?>
 					        <li class="page-item"><a class="page-link" href="?pagina=<?php echo $paginaActual - 1; ?>">Anterior</a></li>
 					    <?php endif; ?>
-					    <div class="d-flex flex-wrap justify-content-around" style="width:90%">
+					    <!--<div class="d-flex flex-wrap justify-content-around" style="width:90%">
 					    	<?php for ($i = 1; $i <= $totalPaginas; $i++): ?>
 					    		<div>
 					    			<li class="page-item"><a class="page-link" href="?pagina=<?php echo $i; ?>" <?php echo ($i == $paginaActual) ? 'class="activo"' : ''; ?>><?php echo $i; ?></a></li>
 					    		</div>
 					    	    
 					    	<?php endfor; ?>
-					    </div>
+					    </div>-->
 					   
 
 					    <?php if ($paginaActual < $totalPaginas): ?>
@@ -132,7 +91,5 @@
 
 		
 	</div>
-</body>
 
 
-</html>
