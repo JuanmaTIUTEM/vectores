@@ -55,6 +55,7 @@
 		  	  <a href="#" class="list-group-item list-group-item-action" onclick="ordenamientos();">Ordenamiento</a>
 		  	  <a href="#" class="list-group-item list-group-item-action" onclick="cp();">Codigos Postales</a>
 		  	  <a href="#" class="list-group-item list-group-item-action" onclick="tarea();">Tareas</a>
+		  	  <a href="#" class="list-group-item list-group-item-action" onclick="arraysJS();">Arrays JS</a>
 		  </div>
 		  <a href="#" class="list-group-item list-group-item-action">Listas</a>
 		  <a href="#" class="list-group-item list-group-item-action">Pilas y Colas</a>
@@ -78,6 +79,11 @@
 			<?php include 'tareas.php'; ?>
 			
 		</div>
+
+		<div id="arraysJS">
+			<?php include 'arraysJS.php'; ?>
+			
+		</div>
 	</section>
 
 
@@ -87,13 +93,12 @@
 </footer>
 
 <script type="text/javascript">
-	let cpostales = document.getElementById('cpostales');
-	let ordenamiento = document.getElementById('ordenamiento');
-	let vectores = document.getElementById('vectores');
+	
 	$(document).ready(function() {
 		$("#cpostales").hide();
 		$("#ordenamiento").hide();
 		$("#vectores").hide();
+		$("#arraysJS").hide();
 		$("#tareas").hide();
 
 	});
@@ -106,6 +111,7 @@
 		$("#cpostales").hide();
 		$("#ordenamiento").hide();
 		$("#tareas").hide();
+		$("#arraysJS").hide();
 		$("#vectores").show();
 		
 
@@ -114,6 +120,7 @@
 		
 		$("#cpostales").hide();
 		$("#tareas").hide();
+		$("#arraysJS").hide();
 		$("#ordenamiento").show();
 		$("#vectores").hide();
 		
@@ -123,6 +130,7 @@
 		
 		$("#cpostales").show();
 		$("#ordenamiento").hide();
+		$("#arraysJS").hide();
 		$("#tareas").hide();
 		$("#vectores").hide();
 		
@@ -132,7 +140,19 @@
 		
 		$("#cpostales").hide();
 		$("#ordenamiento").hide();
+		$("#arraysJS").hide();
 		$("#tareas").show();
+		$("#vectores").hide();
+		
+
+	}
+
+	function arraysJS(){
+		
+		$("#cpostales").hide();
+		$("#ordenamiento").hide();
+		$("#tareas").hide();
+		$("#arraysJS").show();
 		$("#vectores").hide();
 		
 
