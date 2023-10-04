@@ -36,6 +36,9 @@
 		bottom: 0;
 		width: 100%;
 	}
+	body {
+	    -webkit-text-size-adjust: 100%;
+	}
 </style>
 <script type="text/javascript">
 	function vectors(){}
@@ -77,12 +80,9 @@
 		</div>
 		<div id="tareas">
 			<?php include 'tareas.php'; ?>
-			
 		</div>
-
 		<div id="arraysJS">
 			<?php include 'arraysJS.php'; ?>
-			
 		</div>
 	</section>
 
