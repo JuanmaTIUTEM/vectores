@@ -18,6 +18,24 @@
 	</style>
 
 <body>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.php">Indice</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="vectores.php">Vectores</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="ordenamiento.php">Ordenamiento</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="cpostales.php">Codigos postales</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 	<div class="d-flex flex-wrap justify-content-center">
 		<section id="arrPHP" class="container shadow p-4 mb-4 border rounded  m-3 w-45">
 			<h2>Operaciones Javascript <hr></h2>

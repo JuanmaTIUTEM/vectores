@@ -30,6 +30,24 @@
 </style>
 
 <body class="container-fluid">
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.php">Indice</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="vectores.php">Vectores</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ordenamiento.php">Ordenamiento</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="cpostales.php">Codigos postales</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 	<div class="d-flex flex-wrap justify-content-around flex-column w-20 border">
 	<ul class="nav flex-column">
 	    <li class="nav-item">
