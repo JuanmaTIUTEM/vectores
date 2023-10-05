@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "adminCP";
-$password = "_8z[cwDHz.laN*YC";
+$username = "root";
+$password = "";
 $database = "dbpostalcodes";
 
 // Crear una conexión a la base de datos
