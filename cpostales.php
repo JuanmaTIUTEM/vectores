@@ -30,6 +30,7 @@
 </style>
 
 <body class="container-fluid">
+	<?php include 'navBar.php'; ?>
 	<div class="d-flex flex-wrap justify-content-around flex-column w-20 border">
 	<ul class="nav flex-column">
 	    <li class="nav-item">
@@ -132,6 +133,7 @@
 
 		
 	</div>
+	<?php include 'footer.php'; ?>
 </body>
 
 

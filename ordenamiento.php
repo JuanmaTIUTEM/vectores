@@ -18,6 +18,7 @@
 	</style>
 
 <body>
+	<?php include 'navBar.php'; ?>
 	<div class="d-flex flex-wrap justify-content-center">
 		<section id="arrPHP" class="container shadow p-4 mb-4 border rounded  m-3 w-45">
 			<h2>Operaciones Javascript <hr></h2>
@@ -109,5 +110,6 @@
 			<button class="btn btn-outline-success">Codigos postales</button>
 		</form>
 	</div>
+	<?php include 'footer.php'; ?>
 </body>
 </html>

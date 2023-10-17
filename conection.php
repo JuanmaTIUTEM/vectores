@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "adminCP";
-$password = "_8z[cwDHz.laN*YC";
-$database = "dbpostalcodes";
+$username = "perso";
+$password = "anger6669";
+$database = "dbVectores";
 
 // Crear una conexión a la base de datos
 $mysqli = new mysqli($servername, $username, $password, $database);
